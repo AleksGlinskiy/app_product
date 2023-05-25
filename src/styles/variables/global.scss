@@ -1,0 +1,14 @@
+:root {
+  --font-size: 15px;
+  --font-famaly: 'Consolas';
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-famaly);
+  letter-spacing: 1px;
+}
