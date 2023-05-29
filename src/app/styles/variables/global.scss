@@ -1,6 +1,7 @@
 :root {
   --font-size: 17px;
   --font-famaly: 'Consolas';
+  --primary-color: #FFD831;
 }
 
 html, body, #root {
@@ -12,3 +13,4 @@ body {
   font-family: var(--font-famaly);
   letter-spacing: 1px;
 }
+

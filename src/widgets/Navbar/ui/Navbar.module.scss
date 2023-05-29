@@ -1,22 +1,15 @@
 .Navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--primary-color);
-  padding: 20px;
+  padding-top: 30px;
 
   &__nav {
     ul {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
       list-style-type: none;
       padding: 0;
       margin: 0;
 
       li {
         &:not(:first-child) {
-          margin-left: 20px;
+          margin-top: 20px;
         }
 
         a {
