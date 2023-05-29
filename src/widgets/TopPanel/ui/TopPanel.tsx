@@ -2,6 +2,7 @@ import React from 'react';
 import cls from './TopPanel.module.scss';
 import {classNames} from "shared/lib/classNames/classNames";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
+import {LangSwitcher} from "widgets/LangSwitcher";
 
 interface TopPanelProps {
 	className?: string;
@@ -10,6 +11,8 @@ interface TopPanelProps {
 const TopPanel = ({className}:TopPanelProps) => {
 	return (
 		<div className={classNames(cls.TopPanel, {}, [className])}>
+			<LangSwitcher className={cls.LangSwitcher} />
+
 			<ThemeSwitcher />
 		</div>
 	);

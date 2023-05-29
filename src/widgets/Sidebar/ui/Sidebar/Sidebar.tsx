@@ -18,7 +18,8 @@ const Sidebar = ({className}: SidebarProps) => {
 	return (
 		<div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
 			<Logo className={cls.Logo} />
-			<Navbar className={cls.Navbar} />
+
+			{collapsed ? '' : <Navbar className={cls.Navbar} />}
 
 			<Button className={cls.toggleButton} onClick={toggleCollapsed}>
 				{collapsed ? '>' : '<'}
