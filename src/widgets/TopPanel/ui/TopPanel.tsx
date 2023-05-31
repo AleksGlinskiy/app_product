@@ -1,21 +1,19 @@
 import React from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 import cls from './TopPanel.module.scss';
-import {classNames} from "shared/lib/classNames/classNames";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {LangSwitcher} from "widgets/LangSwitcher";
 
 interface TopPanelProps {
-	className?: string;
+    className?: string;
 }
 
-const TopPanel = ({className}:TopPanelProps) => {
-	return (
-		<div className={classNames(cls.TopPanel, {}, [className])}>
-			<LangSwitcher className={cls.LangSwitcher} />
+const TopPanel = ({ className }:TopPanelProps) => (
+    <div className={classNames(cls.TopPanel, {}, [className])}>
+        <LangSwitcher className={cls.LangSwitcher} />
 
-			<ThemeSwitcher />
-		</div>
-	);
-};
+        <ThemeSwitcher />
+    </div>
+);
 
 export default TopPanel;
