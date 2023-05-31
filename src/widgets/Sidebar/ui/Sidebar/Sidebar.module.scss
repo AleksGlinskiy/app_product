@@ -1,30 +1,29 @@
 .Sidebar {
-  position: relative;
-  width: 300px;
-  background-color: var(--secondary-color);
-  padding: 0 20px 20px 20px;
-  color: #fff;
-
-  transition: width 0.3s;
+    position: relative;
+    width: 300px;
+    background-color: var(--secondary-color);
+    padding: 0 20px 20px;
+    color: #fff;
+    transition: width 0.3s;
 }
 
 .collapsed {
-  width: 90px;
+    width: 90px;
 
-  .Logo {
-    span {
-      display: none;
+    .Logo {
+        span {
+            display: none;
+        }
     }
-  }
 }
 
 .toggleButton {
-  position: absolute;
-  bottom: 20px;
-  right: -20px;
-  background: var(--secondary-color) !important;
-  color: #fff;
-  width: 20px;
-  height: 40px;
-  border-radius: 0 5px 5px 0;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    background: var(--secondary-color) !important;
+    color: #fff;
+    width: 20px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
 }

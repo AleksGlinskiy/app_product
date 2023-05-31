@@ -1,16 +1,17 @@
 :root {
-  --font-size: 17px;
-  --font-famaly: 'Consolas';
-  --primary-color: #FFD831;
+    --font-size: 17px;
+    --font-famaly: "Consolas";
+    --primary-color: #ffd831;
 }
 
-html, body, #root {
-  height: 100%;
+html,
+body,
+#root {
+    height: 100%;
 }
 
 body {
-  font-size: var(--font-size);
-  font-family: var(--font-famaly);
-  letter-spacing: 1px;
+    font-size: var(--font-size);
+    font-family: var(--font-famaly);
+    letter-spacing: 1px;
 }
-
