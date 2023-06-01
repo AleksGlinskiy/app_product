@@ -15,7 +15,12 @@ const LangSwitcher = ({ className }: LangSwitcherProps) => {
     };
 
     return (
-        <Button onClick={toggleTranslate} className={classNames('', {}, [className])}>{t('Язык')}</Button>
+        <Button
+            onClick={toggleTranslate}
+            className={classNames('', {}, [className])}
+        >
+            {t('Язык')}
+        </Button>
     );
 };
 

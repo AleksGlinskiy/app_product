@@ -11,7 +11,6 @@ interface TopPanelProps {
 const TopPanel = ({ className }:TopPanelProps) => (
     <div className={classNames(cls.TopPanel, {}, [className])}>
         <LangSwitcher className={cls.LangSwitcher} />
-
         <ThemeSwitcher />
     </div>
 );
