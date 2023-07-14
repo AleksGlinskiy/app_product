@@ -1,5 +1,10 @@
 .Button {
+    display: inline-block;
     cursor: pointer;
+    padding: 0 20px;
+    line-height: 44px;
+    min-height: 44px;
+    text-align: center;
 }
 
 .clear {

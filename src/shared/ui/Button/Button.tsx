@@ -11,7 +11,7 @@ export enum ButtonTheme {
     CLEAR = 'clear',
 }
 
-const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
     const {
         className,
         children,
@@ -29,5 +29,3 @@ const Button: FC<ButtonProps> = (props) => {
         </button>
     );
 };
-
-export default Button;
