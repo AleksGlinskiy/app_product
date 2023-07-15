@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { Button, Logo } from 'shared/ui';
-import { LangSwitcher } from 'widgets/LangSwitcher';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
