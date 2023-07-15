@@ -1,5 +1,5 @@
 name: listing, testing, building
-run-name: ${{ github.actor }} CI
+run-name: ${{ github.actor }} listing, testing, building
 on:
   push:
     branches: [ master ]
@@ -21,6 +21,8 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
+      - name: linting typescript
+        run: npm run lint:ts
       - name: linting scss
         run: npm run lint:scss
       - name: unit testing
