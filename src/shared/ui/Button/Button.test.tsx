@@ -4,7 +4,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 describe('Button', () => {
     test('test render', () => {
         render(
-            <Button>TEST</Button>,
+            <Button>TEST1</Button>,
         );
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
