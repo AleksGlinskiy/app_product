@@ -23,9 +23,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         >
             <Logo className={cls.Logo} />
 
-            <LangSwitcher />
-
-            {/* {collapsed ? '' : <Navbar />} */}
+            <Navbar onlyIcon={collapsed} />
 
             <Button
                 data-testid="sidebar-toggle"
