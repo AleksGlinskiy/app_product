@@ -4,15 +4,15 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 describe('Button', () => {
     test('test render', () => {
         render(
-            <Button>TEST</Button>,
+            <Button>Button</Button>,
         );
-        expect(screen.getByText('TEST')).toBeInTheDocument();
+        expect(screen.getByText('Button')).toBeInTheDocument();
     });
 
     test('test clear theme', () => {
         render(
-            <Button theme={ButtonTheme.CLEAR}>TEST</Button>,
+            <Button theme={ButtonTheme.INLINE}>Button</Button>,
         );
-        expect(screen.getByText('TEST')).toHaveClass('clear');
+        expect(screen.getByText('Button')).toHaveClass('inline');
     });
 });

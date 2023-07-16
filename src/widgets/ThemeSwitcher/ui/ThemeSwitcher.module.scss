@@ -1,8 +1,12 @@
 .ThemeSwitcher {
     &__btn {
+        background: transparent;
+        padding: 0;
+        border: 0;
         width: 24px;
         height: 24px;
         min-height: 24px;
         line-height: 24px;
+        cursor: pointer;
     }
 }

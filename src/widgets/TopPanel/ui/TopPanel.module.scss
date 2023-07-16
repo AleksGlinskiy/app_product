@@ -1,4 +1,6 @@
 .TopPanel {
+    width: 100%;
+    height: max-content;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -8,5 +10,4 @@
 
 .LangSwitcher {
     margin-right: 20px;
-    color: var(--text-color);
 }

@@ -8,14 +8,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export enum ButtonTheme {
-    CLEAR = 'clear',
+    INLINE = 'inline',
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
         className,
         children,
-        theme = ButtonTheme.CLEAR,
+        theme,
         ...other
     } = props;
 

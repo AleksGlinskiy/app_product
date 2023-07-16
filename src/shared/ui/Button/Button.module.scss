@@ -1,18 +1,35 @@
 .Button {
-    background: grey;
+    background: var(--btn-color);
+    color: var(--btn-text-color);
     display: inline-block;
     cursor: pointer;
-    padding: 0 20px;
+    padding: 0 25px;
     line-height: 44px;
     max-height: 44px;
     text-align: center;
     border: 0;
+    border-radius: 3px;
+
+    &:hover {
+        background: var(--primary-color);
+        color: var(--btn-color);
+    }
 }
 
-.clear {
+.inline {
     background: transparent;
     border: 0;
     outline: 0;
     padding: 0;
     margin: 0;
+    line-height: 1;
+    max-height: 20px;
+    color: var(--btn-color);
+    border-radius: 0;
+    border-bottom: 1px solid var(--btn-color);
+
+    &:hover {
+        background: transparent;
+        border-bottom-color: var(--primary-color);
+    }
 }
