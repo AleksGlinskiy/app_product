@@ -27,7 +27,7 @@ const Modal = (props: ModalProps) => {
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
-            timerRef.current = window.setTimeout(() => {
+            timerRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
