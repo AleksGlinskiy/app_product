@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import './styles/index.scss';
 import { AppRouter } from 'app/providers/router';

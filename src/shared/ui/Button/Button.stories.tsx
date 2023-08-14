@@ -38,3 +38,16 @@ InlineDark.args = {
     theme: ButtonTheme.INLINE,
 };
 InlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Clear = Template.bind({});
+Clear.args = {
+    children: 'Button',
+    theme: ButtonTheme.CLEAR,
+};
+
+export const ClearDark = Template.bind({});
+ClearDark.args = {
+    children: 'Button',
+    theme: ButtonTheme.CLEAR,
+};
+ClearDark.decorators = [ThemeDecorator(Theme.DARK)];

@@ -33,3 +33,18 @@
         border-bottom-color: var(--primary-color);
     }
 }
+
+.clear {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    min-height: auto;
+    max-height: 20px;
+    background: none;
+
+    &:hover {
+        background: transparent;
+        border-color: transparent;
+        color: var(--primary-color);
+    }
+}
