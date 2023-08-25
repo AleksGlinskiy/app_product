@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { RoutePatch } from 'shared/config/routeConfig/routeConfig';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ButtonTheme } from 'shared/ui/Button/Button';
+import { LoginModal } from 'features/AuthByUsername';
 import cls from './Navbar.module.scss';
 
 import HomeIcon from '../../assets/icons/home.svg';
@@ -20,8 +21,12 @@ const Navbar = ({ className, onlyIcon }: NavbarProps) => {
 
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false);
+    }, []);
+
+    const onShowModal = useCallback(() => {
+        setIsAuthModal(true);
     }, []);
 
     return (
@@ -41,23 +46,17 @@ const Navbar = ({ className, onlyIcon }: NavbarProps) => {
                         </AppLink>
                     </li>
                     <li>
-                        <Button onClick={onToggleModal} theme={ButtonTheme.CLEAR}>
+                        <Button onClick={onShowModal} theme={ButtonTheme.CLEAR}>
                             <span>{t('Войти')}</span>
                         </Button>
                     </li>
                 </ul>
             </nav>
 
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                <p>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Aspernatur, aut,
-                    culpa cupiditate dolorum earum hic id ipsum
-                    libero nam natus provident totam ut!
-                    Doloremque laudantium nostrum, possimus ullam velit veritatis.
-                </p>
-            </Modal>
+            <LoginModal
+                isOpen={isAuthModal}
+                onClose={onCloseModal}
+            />
         </div>
     );
 };

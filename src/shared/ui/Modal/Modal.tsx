@@ -11,18 +11,26 @@ interface ModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 const Modal = (props: ModalProps) => {
     const {
-        className, children, isOpen, onClose,
+        className, children, isOpen, onClose, lazy,
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -60,6 +68,10 @@ const Modal = (props: ModalProps) => {
         [cls.closing]: isClosing,
         [cls[theme]]: true,
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
