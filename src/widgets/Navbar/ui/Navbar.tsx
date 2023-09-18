@@ -89,10 +89,12 @@ const Navbar = ({ className, onlyIcon }: NavbarProps) => {
                 </ul>
             </nav>
 
-            <LoginModal
-                isOpen={isAuthModal}
-                onClose={onCloseModal}
-            />
+            {isAuthModal && (
+                <LoginModal
+                    isOpen={isAuthModal}
+                    onClose={onCloseModal}
+                />
+            )}
         </div>
     );
 };
